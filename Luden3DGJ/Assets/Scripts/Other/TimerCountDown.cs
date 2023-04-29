@@ -8,7 +8,7 @@ namespace Assets.Scripts.Other
 {
     public class TimerCountDown : MonoBehaviour
     {
-
+        public GameObject LoseUI;
         public float countdownTime = 900.0f; // The amount of time in seconds to count down from
         public float timeLeft; // The amount of time left in the countdown
 
@@ -16,6 +16,7 @@ namespace Assets.Scripts.Other
 
         void Start()
         {
+            Time.timeScale = 1f;
             timeLeft = countdownTime; // Set the initial time left to the countdown time
         }
 
@@ -23,10 +24,11 @@ namespace Assets.Scripts.Other
         {
             timeLeft -= Time.deltaTime; // Subtract the time since the last frame from the time left
 
-            if (timeLeft <= 0.0f)
+            if (timeLeft <= 0.2f)
             {
                 // The countdown has ended
                 timeLeft = 0.0f;
+                Time.timeScale = 0f;
                 // Do something when the countdown ends
                 ShowGameOver();
             }
@@ -41,7 +43,7 @@ namespace Assets.Scripts.Other
 
         private void ShowGameOver()
         {
-            //dopísať
+           LoseUI.SetActive(true); 
         }
     }
 }
