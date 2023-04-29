@@ -10,7 +10,7 @@ namespace Assets.Scripts.Other
     {
 
         public float countdownTime = 900.0f; // The amount of time in seconds to count down from
-        private float timeLeft; // The amount of time left in the countdown
+        public float timeLeft; // The amount of time left in the countdown
 
         public TextMeshProUGUI countdownText; // Assign this in the Unity editor
 
