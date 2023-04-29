@@ -3,10 +3,9 @@ using UnityEngine;
 
 namespace Assets.Scripts.Interactible.InteractWithNPC
 {
-    public class NPCDialoge : CheckIfInteractible
+    public class Hint : CheckIfInteractible
     {
         [SerializeField] private GameObject textToShow;
-
         private void Start()
         {
             textToShow.SetActive(false);
@@ -20,6 +19,10 @@ namespace Assets.Scripts.Interactible.InteractWithNPC
         {
             base.HideButton();
             textToShow.SetActive(false);
+        }
+        protected override void OnTriggerEnter(Collider other)
+        {
+            base.OnTriggerEnter(other);
         }
     }
 }
