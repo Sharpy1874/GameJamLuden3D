@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 263391badb07c1147b253a309cadb0e7
+  - enabled: 1
+    path: Assets/Scenes/dellete later.unity
+    guid: cdb5d7358c9e20b40b5a0f5a64a51901
   m_configObjects: {}

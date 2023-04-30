@@ -6,6 +6,7 @@ namespace Assets.Scripts.Interactible.InteractWithNPC
 {
     public class StartDialogue : MonoBehaviour
     {
+
         public NPCConversation Conversation;
         private void OnTriggerEnter(Collider other)
         {
